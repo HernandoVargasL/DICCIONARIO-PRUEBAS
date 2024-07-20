@@ -1,0 +1,1020 @@
+﻿<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCSH64Q3SF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCSH64Q3SF');
+    </script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="description" content="El primer diccionario digital que consolida más de 200,000 topónimos culturales, naturales y políticos.">
+    <meta name="title" property="og:title" content="Diccionario Geográfico de Colombia">
+    <meta property="og:type" content="website">
+    <meta name="image" property="og:image" content="images/logo-igac-diccionario.jpg">
+    <meta name="keywords" content="diccionario geográfico, diccionario, topónimos, términos geográficos, igac" />
+    <meta name="author" content="Instituto Geográfico Agustín Codazzi - IGAC" />
+    <meta http-equiv="content-language" content="es" />
+    <link rel="canonical" href="https://diccionario.igac.gov.co" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <title>Diccionario Geográfico de Colombia</title>
+    <link type="text/css" async rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/css/bootstrap-colorpicker.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" />
+    <link rel="stylesheet" href="js/lib/dist/css/calcite-maps-bootstrap.min-v0.10.css">
+    <link rel="stylesheet" href="js/lib/dist/css/calcite-maps-arcgis-3.x.min-v0.10.css">
+
+    <link rel="stylesheet" href="https://js.arcgis.com/3.44/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.44/esri/css/esri.css">
+    <link rel="stylesheet" href="/css/diccionario.css">
+    <link rel="stylesheet" href="/css/navbar-footer.css">
+    <link rel="stylesheet" href="/css/maestra.css">
+
+</head>
+    <body class="calcite calcite-nav-top">
+        <!-- header -->
+        <div class="barra_gov">
+            <a class="logo-gov" href="https://www.gov.co/home/" target="_blank">
+                <img alt="Logo Gov.co" src="/images/nav/header_govco.png">
+            </a>
+        </div>
+        <nav style="z-index: 101;">
+            <div class="navbarigac">
+                <div class="logos">
+                    <a href="https://www.igac.gov.co" class="navbar-brand-igac" target="_blank">
+                        <img alt="Logo IGAC" src="/images/nav/logo.png">
+                    </a>
+                    <img src="/images/nav/diccionario.svg" alt="Diccionario Geográfico de Colombia">
+                </div>
+                <ul id="link-list">
+                    <li>
+                        <a id="inicio" href="#" onclick="gotoHome();">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="collapse-buton">
+                            Acerca de
+                            <img src="/images/nav/ico-arrow.png" alt="">
+                        </a>
+                        <ul id="collapse-menu" class="collapse-menu">
+                            <li>
+                                <a href="/el_nuevo_diccionario_geografico.html">El nuevo diccionario geogr&#225;fico</a>
+                                <img src="/images/nav/ico-arrow.png" alt="">
+                            </li>
+                            <li>
+                                <a href="/el_rol_del_igac.html">El rol del IGAC</a>
+                                <img src="/images/nav/ico-arrow.png" alt="">
+                            </li>
+                            <li>
+                                <a href="/grandes_tematicas.html">Grandes tem&aacute;ticas</a>
+                                <img src="/images/nav/ico-arrow.png" alt="">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class='nav-bar-toggle-igac'>
+                    <div class='icon-bar'></div>
+                    <div class='icon-bar'></div>
+                    <div class='icon-bar'></div>
+                </button>
+            </div>
+            <div class='navbarnavigac'>
+            </div>
+        </nav>
+        <div class="calcite-map">
+            <div id="mainDiv" class="">
+                <!-- Search Panel -->
+                <div id="panelSearch" class="panel collapse">
+                    <div id="collapseSearch" class="panel-collapse">
+                        <div id="sidebar-container">
+                            <ul class="list-group">
+                                <a data-toggle="sidebar-colapse" class="sidebar-colapse-button d-none-new-a bg-dark list-group-item list-group-item-action d-flex align-items-center">
+                                    <div class="d-flex w-100 justify-content-start align-items-center icon-toggle-container">
+                                        <img src="/images/iconos/icon-toggle.svg" alt="search">
+                                    </div>
+                                </a>
+                                <div class="container-panel-body">
+                                    <div class="panel-body" style="background: var(--bg-igac-gris); padding: 0px;">
+                                        <div class="d-none-newest" id="containerFiltros">
+                                            <div id="panelSearchFiltros" class="panel panel-default" data-toggle="popover">
+                                                <div>
+                                                    <div class="content-tools-search">
+                                                        <div id="searchHeader" class="panel-heading">
+                                                            <h3 class="panel-title" style="display: inline-block;">Filtra resultados</h3>
+                                                            <a id="filtrosBarLimpiar2" href="#" onclick="limpiarFiltros();">Limpiar</a>
+                                                        </div>
+                                                    </div>
+                                                    <div id="searchBody" class="panel-body">
+                                                        <div id="searchBar" class="" style="background-color: unset;">
+                                                            <div id="typeahead__container" class="typeahead__container">
+                                                                <div class="typeahead__field">
+                                                                    <div style="width: 100%;" class=" btn-grouptypeahead__query">
+                                                                        <span class="searchTextBtn glyphicon glyphicon-search"></span>
+                                                                        <input id="input2" class="typeahead searchCtrl2" type="text" placeholder="Busca un topónimo" autocomplete="off">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="unidad-container">
+                                                            <label style="font-size: 14px;">Entidad Territorial:</label>
+                                                            <select class="form-control" id="searchFiltro" style="width: 100%;font-size: 14px;">
+                                                            </select>
+                                                        </p>
+                                                        <p>
+                                                            <label>Letra:</label>
+                                                            <select class="form-control" id="searchFiltroLetra" style="width: 100%;font-size: 14px;">
+                                                            </select>
+                                                        </p>
+                                                        <p>
+                                                            <label>Término geográfico</label>
+                                                            <select class="form-control" id="searchFiltroTipo" style="width: 100%;font-size: 14px;">
+                                                            </select>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mapViewDiv" class="calcite-map-absolute main-small-map" style="background: white;">
+                <div id="homeDiv">
+                    <div class="searchbarinput">
+                        <div class="container">
+                            <div class="searchbarinput-content">
+                                <div id="sidebar-colapse" data-toggle="sidebar-colapse" class="buton-sidebar" style="cursor: pointer;">
+                                    <button type="submit"><img src="/images/recursos/search.svg" alt="search"></button>
+                                    <span class="searchLabel">Empieza tu búsqueda</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section id="jumbotronHome" class="section-portada">
+                        <div class="container-portada">
+                            <div class="portada container">
+                                <div class="row justify-content-between">
+                                    <div class="text-content align-items-center col-12 col-sm-6 col-md-6">
+                                        <div>
+                                            <div class="title">
+                                                <p>
+                                                    El nuevo capítulo del
+                                                </p>
+                                                <h1>Diccionario Geográfico <br> de Colombia.</h1>
+                                            </div>
+                                            <div class="summary">
+                                                <p>
+                                                    El primer diccionario digital que consolida más de 200,000 topónimos culturales, naturales y políticos. Una iniciativa que busca acercanos a la realidad geográfica de Colombia y evidenciar la distribución de nuestros elementos geográficos en el territorio.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6">
+                                        <img src="/images/DICCIONARIO/home_ilustration.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="jumbotronET" class="section-portada" style="display: none;">
+                        <div class="container-portada">
+                            <div class="portada container">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="text-content col-12 col-sm-6 col-md-6">
+                                        <div>
+                                            <div class="title">
+                                                Entidades Territoriales
+                                            </div>
+                                            <div class="summary">
+                                                <p>
+                                                    En la sección de Entidades Territoriales de nuestro diccionario geográfico digital encontrarás información detallada sobre las entidades político-administrativas públicas del orden territorial, que incluyen Departamentos y Municipios. Cada una de estas divisiones juega un papel crucial en la organización y gestión de las regiones a nivel local y nacional. Explora esta sección para comprender mejor cómo estas entidades estructuran y caracterizan el paisaje geográfico y administrativo de Colombia
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6">
+                                        <img src="/images/img/entidades-territoriales3.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="jumbotronTopo" class="section-portada" style="display: none;">
+                        <div class="container-portada">
+                            <img id="toponimoResultsTipoHeader" />
+                            <div class="container">
+                                <div class="nombre-container col-md-6 px-3 m-0">
+                                    <div>
+                                        <div id="toponimoNombre" class="title">
+                                        </div>
+                                        <div class="summary toponimoDescripcionContainer">
+                                            <div id="toponimoDescripcion">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shape"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="jumbotronTermino" class="section-portada" style="display: none;">
+                        <div class="container-portada">
+                            <div class="portada container">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="text-content col-12 col-sm-6 col-md-6">
+                                        <div>
+                                            <div id="terminoNombre" class="title">
+                                            </div>
+                                            <div id="terminoSubtitle" class="summary">
+                                            </div>
+                                            <div id="terminoDefinicionDiv"style="margin-top: 0px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6">
+                                        <div id="terminoResultsUnidadHeader">
+                                            <img id="terminoResultsUnidadHeaderImg" class="deptos-header-img" />
+                                            <div id="homeButton1"></div>
+                                            <div id="locateButton1"></div>
+                                            <div id="basemapGalleryButton1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="jumbotronUnidad" class="section-portada" style="display: none;">
+                        <div class="container-portada">
+                            <div class="portada container">
+                                <a href="#" class="linkBtn" onclick="gotoHome();">Regresar <i class="fa fa-chevron-right"></i></a>
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="text-content col-12 col-sm-6 col-md-6">
+                                        <div id="listResultsUnidadContenido2"></div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6">
+                                        <div id="listResultsUnidad" class="unidad-card">
+                                            <div id="listResultsUnidadHeader">
+                                                <img id="listResultsUnidadHeaderImg" class="deptos-header-img" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section id="jumbotronNG" class="section-portada" style="display: none;">
+                        <div class="container-portada">
+                            <div class="portada container">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="text-content col-12 col-sm-6 col-md-6">
+                                        <div>
+                                            <div class="title">
+                                                Nombres Geogr&aacute;ficos - Top&oacute;nimos
+                                            </div>
+                                            <div class="summary">
+                                                <p>
+                                                    Este apartado de nuestro diccionario geográfico está dedicado a los topónimos, los cuales son nombres propios de lugares y elementos geográficos fundamentales para la descripción y la relación con el entorno. Desde tiempos antiguos, los topónimos han sido útiles para identificar no solo lo que está presente al rededor, sino también para recordar y planificar el futuro. En la cartografía, estos nombres no solo etiquetan entidades geográficas naturales y artificiales, sino que también preservan la rica historia y cultura asociada a cada lugar.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6">
+                                        <img src="/images/img/nombres-geograficos3.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="jumbotronTG" class="section-portada" style="display: none;">
+                        <div class="container-portada">
+                            <div class="portada container">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="text-content col-12 col-sm-6 col-md-6">
+                                        <div>
+                                            <div class="title">
+                                                T&eacute;rminos Geogr&aacute;ficos
+                                            </div>
+                                            <div class="summary">
+                                                <p>
+                                                    En la sección de Términos Geográficos de nuestro diccionario geográfico digital, exploramos los conceptos esenciales de la geografía que definen la dimensión espacial, ubicaciones geográficas, características topográficas y recursos naturales. Sumérgete en este espacio para comprender mejor cómo estos términos y conceptos ayudan a describir y entender nuestro mundo desde una perspectiva geoespacial.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6">
+                                        <img src="/images/img/terminos-geograficos3.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="jumbotronNGAdd" class="section-portada" style="display: none;">
+                        <div class="container-portada">
+                            <div class="portada container">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="text-content col-12 col-sm-6 col-md-6">
+                                        <div>
+                                            <div class="title">
+                                                Agregar un Nuevo Nombre Geográfico
+                                            </div>
+                                            <div class="summary">
+                                                <p>
+                                                    Este espacio está diseñado para que puedas contribuir con nombres geográficos que consideres relevantes y que aún no estén en nuestra base de datos. Queremos que seas parte activa de este proyecto: si conoces algún lugar que crees debería estar incluido, aquí puedes proporcionar la información necesaria para su inclusión.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6">
+                                        <img src="/images/img/agregar-nevo-termino-geografico3.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="jumbotronQP" class="section-portada" style="display: none;">
+                        <div class="container-portada">
+                            <div class="portada container">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="text-content col-12 col-sm-6 col-md-6">
+                                        <div>
+                                            <div class="title">
+                                                Quejas y Peticiones
+                                            </div>
+                                            <div class="summary">
+                                                <p>
+                                                    Este espacio está destinado para que puedas expresar cualquier inquietud o sugerencia sobre el diccionario, lo cual nos ayudará a mejorar continuamente nuestro servicio. Tus comentarios son valiosos para nosotros.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6">
+                                        <img src="/images/img/quejas-peticiones3.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>                    
+                    <div id="menuDiv" class="principal">
+                        <div class="container">
+                            <h2 class="subtitulo">Filtro por Temática</h2>
+                            <div class="row">
+                                <div class="col-md-4" style="cursor: pointer;" onclick="gotoET();">
+                                    <img src="/images/img/entidades-territoriales.svg" class="icon-new3">
+                                    <div class="border-new a">
+                                        <h3>Entidades Territoriales</h3>
+                                        <p>Sumérgete en la información de los Departamentos y Municipios de Colombia, cruciales para la organización y gestión local y nacional.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="cursor: pointer;" onclick="gotoNG();">
+                                    <img src="/images/img/nombres-geograficos.svg" class="icon-new3">
+                                    <div class="border-new b">
+                                        <h3>Nombres Geogr&aacute;ficos</h3>
+                                        <p>Explora los topónimos, esenciales para describir y relacionarse con el entorno, preservando la historia y cultura locales en la cartografía.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="cursor: pointer;" onclick="gotoTG();">
+                                    <img src="/images/img/terminos-geograficos.svg" class="icon-new3">
+                                    <div class="border-new c">
+                                        <h3>T&eacute;rminos Geogr&aacute;ficos</h3>
+                                        <p>Reconoce términos y conceptos esenciales de la geografía para comprender y describir nuestro mundo desde una perspectiva geográfica.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section id="containerBusqueda" class="container contain-acercade-busqueda">
+                        <div class="input-container">
+                            <div class="search-container">
+                                <div id="typeahead__container" class="typeahead__container">
+                                    <div class="typeahead__field">
+                                        <div style="width: 100%;" class=" btn-grouptypeahead__query">
+                                            <span id="copy-button" class="searchTextBtn glyphicon glyphicon-search"></span>
+                                            <input id="inputSearch" class="typeahead searchCtrl2" type="text" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="acerca-de">
+                            <div class="items">
+                                <p>Acerca de:</p>
+                                <a href="/el_nuevo_diccionario_geografico.html">El nuevo diccionario geogr&#225;fico</a>
+                                <a href="/el_rol_del_igac.html">El rol del IGAC</a>
+                                <a href="/grandes_tematicas.html">Grandes tem&aacute;ticas</a>
+                                <a href="/terminos.html">T&eacute;rminos geogr&aacute;ficos</a>
+                            </div>
+                        </div>
+                    </section>
+                    <div id="resultadosDiv" style="display: none;">
+                        <div id="resultadosLoading" class="container" style="display: none;">
+                            <div style="width: 100%;">
+                                <br />
+                                <center>
+                                    <img src="images/loading.gif" style="height: 80px; width: 80px;" />
+                                </center>
+                            </div>
+                        </div>
+                        <div id="resultadosNO" class="container" style="display: none; text-align: center;">
+                            <div style="width: 100%;">
+                                <h3>No se encontraron resultados</h3>
+                                <p>Inicia tu búsqueda con la barra superior</p>
+                            </div>
+                        </div>
+                        <div id="resultadosET" class="container" style="display: none;">
+                            <img src="/images/img/entidades-territoriales2.svg" class="icon-new2">
+                            <div class="border-new2 a">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        Entidades Territoriales
+                                        <div id="resultadosETEnlaces" style="text-align: left;"></div>
+                                    </div>
+                                </div>
+                                <a href="#" id="resultadosET_VM" class="btn btnlink ver-mas" onclick="showMore('resultadosET'); return false;">Ver más</a>
+                            </div>
+                        </div>
+                        <div id="resultadosNG" class="container" style="display: none;">
+                            <img src="/images/img/nombres-geograficos2.svg" class="icon-new2">
+                            <div class="border-new2 b">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        Nombres Geogr&aacute;ficos
+                                        <div id="resultadosNGEnlaces" style="text-align: left;"></div>
+                                    </div>
+                                </div>
+                                <a href="#" id="resultadosNG_VM" class="btn btnlink ver-mas" onclick="showMore('resultadosNG'); return false;">Ver más</a>
+                            </div>
+                        </div>
+                        <div id="resultadosTG" class="container" style="display: none;">
+                            <img src="/images/img/terminos-geograficos2.svg" class="icon-new2">
+                            <div class="border-new2 c">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        T&eacute;rminos Geogr&aacute;ficos
+                                        <div id="resultadosTGEnlaces" style="text-align: left;"></div>
+                                    </div>
+                                </div>
+                                <a href="#" id="resultadosTG_VM" class="btn btnlink ver-mas" onclick="showMore('resultadosTG'); return false;">Ver más</a>
+                            </div>
+                        </div>
+                        <div id="resultadosET_D" class="container" style="display: none;">
+                            <img src="/images/img/departamentos-distritos2.svg" class="icon-new2">
+                            <div class="border-new2 d">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        Departamentos
+                                        <div id="resultadosET_DEnlaces" style="text-align: left;"></div>
+                                    </div>
+                                </div>
+                                <a href="#" id="resultadosET_DVM" class="btn btnlink ver-mas" onclick="showMore('resultadosET_D'); return false;">Ver más</a>
+                            </div>
+                        </div>
+                        <div id="resultadosET_M" class="container" style="display: none;">
+                            <img src="/images/img/municipios2.svg" class="icon-new2">
+                            <div class="border-new2 e">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        Municipios
+                                        <div id="resultadosET_MEnlaces" style="text-align: left;"></div>
+                                    </div>
+                                </div>
+                                <a href="#" id="resultadosET_MVM" class="btn btnlink ver-mas" onclick="showMore('resultadosET_M'); return false;">Ver más</a>
+                            </div>
+                        </div>
+                        <div id="resultadosNGAdd" class="container" style="display: none;" class="row">
+                            <div class="col-md-5">
+                                <div class="infogeneral row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="ngaddNombresField" placeholder="Nombre Geográfico">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="ngaddDescField" placeholder="Descripción"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <select id="ngaddCategoria">
+                                                <option value="" disabled selected>Categoría del Nombre Geográfico:</option>
+                                                <option value="Categoría 1">Categoría 1</option>
+                                                <option value="Categoría 2">Categoría 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <select id="ngaddCoordenada">
+                                                <option value="" disabled>Sistema de referencia:</option>
+                                                <option value="EPSG:9377" selected>Origen Nacional (EPSG:9377)</option>
+                                                <option value="EPSG:4326">WGS 84 (EPSG:4326)</option>
+                                                <option value="EPSG:3857">WGS84 Web Mercator (EPSG:3857)</option>
+                                                <option value="EPSG:4686">MAGNA-SIRGAS (EPSG:4686)</option>
+                                                <option value="EPSG:3114">MAGNA-SIRGAS / Colombia Far West zone (EPSG:3114)</option>
+                                                <option value="EPSG:3115">MAGNA-SIRGAS / Colombia West zone (EPSG:3115)</option>
+                                                <option value="EPSG:3116">MAGNA-SIRGAS / Colombia Bogota zone (EPSG:3116)</option>
+                                                <option value="EPSG:3117">MAGNA-SIRGAS / Colombia East Central zone (EPSG:3117)</option>
+                                                <option value="EPSG:3118">MAGNA-SIRGAS / Colombia East zone (EPSG:3118)</option>
+                                                <option value="EPSG:32617">WGS 84 / UTM zone 17N (EPSG:32617)</option>
+                                                <option value="EPSG:32618">WGS 84 / UTM zone 18N (EPSG:32618)</option>
+                                                <option value="EPSG:32619">WGS 84 / UTM zone 19N (EPSG:32619)</option>
+                                                <option value="EPSG:32717">WGS 84 / UTM zone 17S (EPSG:32717)</option>
+                                                <option value="EPSG:32718">WGS 84 / UTM zone 18S (EPSG:32718)</option>
+                                                <option value="EPSG:32719">WGS 84 / UTM zone 19S (EPSG:32719)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="ngaddX" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="ngaddY" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <a href="#" onclick="ubicarNG(); return false;" class="btn btn-primary">Ubicar</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" readonly="readonly" id="ngaddMunicipio" placeholder="Municipio">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" readonly="readonly" id="ngaddDepto" placeholder="Departamento">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="upload-container">
+                                            <label style="width: 100%;" class="text-center" for="ngaddImage">Selecciona una Imagen para Cargar</label>
+                                            <form id="ngaddImageField" method="post" enctype="multipart/form-data">
+                                            </form>
+                                            <input type="file" id="ngaddImage" name="image" accept="image/png, image/jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="file-info" id="ngaddInfo"></div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <a href="#" onclick="submitNG(); return false;" class="btn btn-primary">Enviar</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div id="ngAddMap">
+                                    <div id="homeButton"></div>
+                                    <div id="locateButton"></div>
+                                    <div id="basemapGalleryButton"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="resultadosQP" class="container" style="display: none;">
+                            <div class="col-md-8 m-auto">
+                                <div class="clas-row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="qpNombresField" placeholder="Nombre">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="qpApellidosField" placeholder="Apellidos">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="qpCorreoField" placeholder="Correo electronico">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="qpTelefonoField" placeholder="Celular">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="qpDescField" placeholder="Descripción"></textarea>
+                                        </div>
+                                        <a href="#" class="btn btn-primary">Enviar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="collapseTerminoOtrosDiv">
+                            <div>
+                                <div id="terminoOtrosDiv" style="margin-top: 0px;">
+                                </div>
+                                <a class="btn ver-resultados">
+                                    <p>Ver más resultados</p>                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div id="resultadosTermino" class="container" style="display: none;">
+                            <div id="resultadosTerminoDEMS" style="width: 100%;">
+                                <div class="row">
+                                    <div class="col-md-3" style="cursor: pointer;">
+                                        <img src="/images/img/demografia.svg" class="icon-new4">
+                                        <div class="border-new4 a">
+                                            Demograf&iacute;a
+                                            <p class="class">Explora información relacionada con la distribución, densidad y dinámicas poblacionales regionales.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="cursor: pointer;">
+                                        <img src="/images/img/economia.svg" class="icon-new4">
+                                        <div class="border-new4 b">
+                                            Econom&iacute;a
+                                            <p class="class">Indaga sobre las estructuras económicas, actividades productivas y factores que influyen en el desarrollo socioeconómico regional.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="cursor: pointer;">
+                                        <img src="/images/img/movilidad.svg" class="icon-new4">
+                                        <div class="border-new4 c">
+                                            Movilidad
+                                            <p class="class">Encuentra información sobre los diversos tipos de desplazamientos humanos y su sistema de transporte, destacando su impacto en la configuración geográfica y social de las sociedades contemporáneas.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="cursor: pointer;">
+                                        <img src="/images/img/social.svg" class="icon-new4">
+                                        <div class="border-new4 d">
+                                            Social
+                                            <p class="class">Explora estructuras, dinámicas y fenómenos que caracterizan las interacciones humanas, desde aspectos culturales y religiosos hasta temas de salud y educación.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="terminoDescripcionContainer mt-2">
+                                <div id="terminoDescripcion">
+                                </div>
+                            </div>                                                         
+                        </div>
+                    </div>
+                    <div id="searchDiv" style="display: none;">
+                        <div class="searchbarinput">
+                            <div class="container">
+                                <div class="searchbarinput-content">
+                                    <div class="buton-sidebar">
+                                        <div class="buton-sidebar">
+                                            <button data-toggle="sidebar-colapse" type="submit"><img src="/images/recursos/search.svg" alt="search"></button>
+                                            <span class="searchLabel">Empieza tu búsqueda</span>
+                                        </div>
+                                    </div>
+                                    <div class="pull-bar">
+                                        <div class="pull-right" id="filtrosBar"></div>
+                                        <div class="pull-right" id="filtrosBarLimpiar"><a href="#" onclick="limpiarFiltros();" style="color: red !important;">Limpiar</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                    <div id="searchBar2" class="container scontainer">
+                        <div class="typeahead__container">
+                            <div class="typeahead__field">
+                                <div style="width: 100%;" class=" btn-grouptypeahead__query">
+                                    <span class="searchTextBtn glyphicon glyphicon-search"></span>
+                                    <input class="typeahead searchCtrl" type="text" placeholder="¿Qué estás buscando?">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                        <div id="listResults" class="container" style="padding-top: 30px;">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="pull-right tooltip-class-carac">
+                                        <div class="shareLink" onclick="shareLink();return false;" data-placement="left" title="" data-original-title="Click para copiar el Link"><img src="/images/iconos/Link.png" alt="Compartir" style="width: 15px; height: 15px;"></div>
+                                    </div>
+                                    <div id="listResultsTerminosCount"></div>
+                                    <div id="listResultsTerminosContainer">
+                                    </div>
+                                    <div id="listResultsCount"></div>
+                                    <div id="listResultsContainer">
+                                    </div>
+                                    <table id="tableSearchTermino" class="table table-condensed table-hover" style="text-align: center;width: 100%;display: none;">
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>Termino</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tableSearchLetterTable">
+                                        </tbody>
+                                    </table>
+                                    <div id="listResultsTerminos2Count"></div>
+                                    <div id="listResultsTerminos2Container">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div id="listResultsUnidad" class="unidad-card">
+                                        <div id="listResultsUnidadContenido">
+                                        </div>
+                                    </div>
+                                    <div id="listResultsTipo" class="tipo-card">
+                                        <div id="listResultsTipoHeader">
+                                        </div>
+                                        <div id="listResultsTipoContenido">
+                                        </div>
+                                    </div>
+                                    <div id="listResultsLetra" class="letra-card">
+                                        <div id="listResultsLetraHeader">
+                                        </div>
+                                        <div id="listResultsLetraContenido">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menuDiv" class="secundario">
+                        <div class="container">
+                            <h2 class="subtitulo">Accesos directos</h2>
+                            <div class="row">
+                                <div class="col-md-4" style="padding: 20px; cursor: pointer;" onclick="gotoNGAdd();">
+                                    <img src="/images/img/agregar-nevo-termino-geografico.svg" class="icon-new">
+                                    <div class="border-new d">
+                                        <h3>
+                                            Agregar un Nuevo Nombre Geogr&aacute;fico
+                                        </h3>
+                                        <p>
+                                            Contribuye con nuevos nombres geográficos relevantes para enriquecer nuestro diccionario digital. Ayúdanos a incluir lugares proporcionando la información necesaria.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="padding: 20px; cursor: pointer;" onclick="gotoQP();">
+                                    <img src="/images/img/quejas-peticiones.svg" class="icon-new">
+                                    <div class="border-new f">
+                                        <h3>
+                                            Quejas y Peticiones
+                                        </h3>
+                                        <p>
+                                            Tu opinión es crucial para mejorar nuestro servicio. Expresa cualquier inquietud o sugerencia sobre el diccionario geográfico aquí.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="letterDiv" style="display: none; padding-bottom: 60px;">
+                    <div id="jumbotron2">
+                        <div class="searchbarinput">
+                            <div class="container">
+                                <div class="searchbarinput-content">
+                                    <div class="buton-sidebar">
+                                        <button data-toggle="sidebar-colapse" type="submit"><img src="/images/recursos/search.svg" alt="search"></button>
+                                        <span class="searchLabel">Empieza tu búsqueda</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container container-letters2">
+                            <div class="content-letters-inside-page">
+                                <div class="letterImg-container" style="text-align: center;">
+                                    <img id="letterImg" src="" />
+                                </div>
+                                <div class="col-md-4 jumbo-titulo letterResume-container">
+                                    <div class="pull-right tooltip-class-carac">
+                                        <div class="shareLink" onclick="shareLink();return false;" data-placement="left" title="" data-original-title="Click para copiar el Link"><img src="/images/iconos/Link.png" alt="Compartir" style="width: 15px; height: 15px;"></div>
+                                    </div>
+                                    <p id="letterHeader1" style="font-size: 40px; margin: 0px; padding: 0px; line-height: 1em;">
+                                    </p>
+                                    <hr style="border-top: 1px solid #0E53A9;">
+                                    <p id="letterHeaderMinMax">
+                                    </p>
+                                    <p class="term-number">
+                                        Top&oacute;nimos: <span id="letterHeaderCount"></span><br />
+                                        T&eacute;rminos geogr&aacute;ficos: <span id="letterHeaderCount2"></span>
+                                    </p>
+                                    <!--
+                                <p style="font-size: 14px; margin: 0px;line-height: 1.2em;padding-top: 20px;color:gray;">
+                                    Al apagar la alarma acaba la mañana para Ana. Marchará a andar hasta allá, a trabajar. Ganará la paga al labrar, arar, atar. Parará al alba, cansada.
+                                </p>
+                                -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="container list-leters-content">
+                        <div class="pagination-a">
+                            <table class="table" style="color: #444; font-size: 16px;font-style: italic;">
+                                <tr>
+                                    <td id="letterPrev" style="cursor: pointer;" onclick="prevLetter();">
+                                    </td>
+                                    <td id="letterActual" style="cursor: pointer;">
+                                    </td>
+                                    <td id="letterNext" style="text-align: right;cursor: pointer;" onclick="nextLetter();">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="listResultsLetterRange"></div>
+                        <div id="listResultsLetter">
+                        </div>
+                    </div>
+                    <br />
+                    <table id="tableSearchLetter" class="table table-condensed table-hover" style="text-align: center;width: 100%;display: none;">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Termino</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableSearchLetterTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="rowf">
+                        <div class="col-md-6f">
+                            <h2 class="footer-titulo">Instituto Geográfico Agustín Codazzi - IGAC</h2>
+                        </div>
+                        <div class="logos-footer col-md-6f">&nbsp;</div>
+                    </div>
+                    <div class="rowf">
+                        <div class="col-md-6f">
+                            <h2 class="sub-titulo-sede-gov-co">Información sede principal</h2>
+                            <h3>Dirección:</h3>
+                            <p>Bogotá D.C. - Carrera 30 # 48-51</p>
+                            <h3>Horarios de atención al ciudadano:</h3>
+                            <p>Abierto al público de lunes a viernes de 9:00 a.m. a 4:00 p.m. jornada continua Sede Central y territorial Cundinamarca (Horario de atención temporal acatando las medidas y demás regulaciones de bioseguridad)</p>
+                            <h3>Teléfono Conmutador:</h3>
+                            <p>
+                                <a href="tel:6016531888">+57 601 653 18 88</a>
+                            </p>
+                            <h3>Correo de contacto:</h3>
+                            <p>
+                                <a href="mailto:contactenos@igac.gov.co">contactenos@igac.gov.co</a>
+                            </p>
+                            <h3>Correo de notificaciones judiciales:</h3>
+                            <p>
+                                <a href="mailto:judiciales@igac.gov.co">judiciales@igac.gov.co</a>
+                            </p>
+                            <p>NIT: 8999990049</p>
+                            <p>©Copyright 2021 - Todos los derechos reservados Gobierno de Colombia</p>
+                        </div>
+                        <div class="col-md-6f">
+                            <h3>Contáctenos en nuestras redes sociales</h3>
+                            <div class="redes-sociales">
+                                <p>
+                                    <a href="https://www.facebook.com/IgacColombia" tabindex="-1" target="_blank">
+                                        <img alt="Visitar Facebook IGAC" class="icono-redes" src="/images/footer/facebook.svg">
+                                        Facebook IGAC
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="https://twitter.com/igacColombia" tabindex="-1" target="_blank">
+                                        <img alt="Visitar Twitter IGAC" class="icono-redes" src="/images/footer/twitter.svg">
+                                        Twitter IGAC
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="https://www.instagram.com/accounts/login/?next=/igacColombia/" tabindex="-1" target="_blank">
+                                        <img alt="Visitar Instagram IGAC" class="icono-redes" src="/images/footer/instagram.svg">
+                                        Instagram IGAC
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="footer-enlaces">
+                                <a class="btn-low">Políticas</a>
+                                <a class="btn-low">Mapa del sitio</a>
+                                <a class="btn-low">Términos y condiciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gov-co-footer-pie">
+                <div class="gov-co-footer-auto containerf">
+                    <img alt="Logo marca de Colombia" class="gov-co-logo-pie-blanco" src="/images/footer/marca_colombia.png">
+                    <img alt="Logo de Gov Co" class="gov-co-logo-pie-mesa" src="/images/footer/header_govco.png">
+                    <a class="text-white text-align-right" href="https://www.gov.co" target="_blank">
+                        Conoce GOV.CO aquí
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <div id="modalLogin" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="border: none; padding-bottom: 0px;">
+                        <a href="#" class="close" onclick="closeLogin(); return false;" aria-label="Cerrar"><span aria-hidden="true">&times;</span></a>
+                        <h4 class="modal-title">Iniciar sesi&oacute;n</h4>
+                    </div>
+                    <div class="modal-body" style="padding-top: 0px;">
+                        <div id="loginContainer">
+                            <div id="authContainer">
+                            </div>
+                        </div>
+                        <div id="logoutContainer" style="text-align: center;padding: 10px;">
+                            <img id="userPhoto2" src="images/icono_ingreso.png" style="width: 64px; height: 64px;border-radius: 50%;" alt="Imagen Usuario" />
+                            <h5><span id="userName2"></span></h5>
+                            <button id="logoutBtn" type="button" onclick="signOut();" class="btn btn-default btn-danger">
+                                Cerrar sesi&oacute;n
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modalForm" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center">
+                            Sus Datos Han Sido Cargados Exitosamente.
+                            <br>
+                            La información será validada por nuestros profesionales
+                        </p>
+                        <div class="shape"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth__es.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/i18n/es.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/i18n/es.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchorme/2.1.2/anchorme.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/dataTables.bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/terraformer/1.0.9/terraformer.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.0/proj4.js"></script>
+        <script type="text/javascript" defer src="https://js.arcgis.com/3.44/"></script>
+        <script type="text/javascript" src="js/lib/terraformer-arcgis-parser.min.js"></script>
+        <script type="text/javascript" src="/navbar.js"></script>
+        <script type="text/javascript" src="/js/index.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Hide submenus
+                $('#body-row .collapse').collapse('hide');
+
+                // Collapse/Expand icon
+                $('#collapse-icon').addClass('fa-angle-double-right');
+
+                // Collapse click
+                $('[data-toggle=sidebar-colapse]').click(function () {
+                    SidebarCollapse();
+                });
+
+                function SidebarCollapse() {
+                    $('#containerFiltros').toggleClass('d-none-newest d-none-new');
+                    $('.sidebar-colapse-button').toggleClass("d-none-new-a d-none-newest-b");
+                    $('#collapse-icon').toggleClass('fa-chevron-left fa-angle-double-right');
+                    $('#collapse-icon').toggleClass('fa-chevron-left fa-angle-double-right');
+                    $('#jumbotron1, #listResults, .searchbarinput, #tableSearchLetter_paginate, .list-leters-content, .contain-letters, .container-letters2, .footer, .termino-page, .toponimo-page, .contain-acercade-busqueda').toggleClass('d-none-new-2 d-none-newest-2');
+                }
+            });
+        </script>
+        <script>
+            var pos = 0;
+            var el = document.getElementById("mainDiv");
+            var m = 0;
+            window.addEventListener("scroll", function () {
+                pos = window.pageYOffset;
+                if (pos > 0) {
+                    el.style.marginTop = -50 + "px";
+                } else {
+                    el.style.marginTop = 0 + "px";
+                }
+            }, false);
+        </script>
+    </body>
+</html>

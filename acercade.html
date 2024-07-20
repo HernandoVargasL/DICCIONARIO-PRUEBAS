@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K07TZ36RDH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177680669-2');
+    </script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="title" property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta name="image" property="og:image" content="">
+    <meta name="keywords" content="" />
+    <meta name="author" content="Instituto Geográfico Agustín Codazzi - IGAC" />
+    <meta http-equiv="content-language" content="es" />
+    <link rel="canonical" href="" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <title>Diccionario</title>
+
+    <link type="text/css" async rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/css/bootstrap-colorpicker.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" />
+    <link rel="stylesheet" href="js/lib/dist/css/calcite-maps-bootstrap.min-v0.10.css">
+    <link rel="stylesheet" href="js/lib/dist/css/calcite-maps-arcgis-3.x.min-v0.10.css">
+
+    <link rel="stylesheet" href="/css/diccionario.css">
+</head>
+<body class="calcite calcite-nav-top acerca-de-body">
+
+    <nav class="navbar calcite-navbar navbar-fixed-top calcite-text-light calcite-bg-dark calcite-bgcolor-igac">
+        <div class="calcite-title calcite-overflow-hidden" style="z-index: 100;">
+            <div class="calcite-title-main">
+                <a href="https://www.igac.gov.co" target="_blank">
+                    <img alt="Logo IGAC" src="/images/iconos/logo.svg" style="height: 35px; padding-left: 20px;" />
+                </a>
+            </div>
+            <div class="logo-diccionario">
+                <a href="#">
+                    <img class="descktop" src="/images/logo/logo.svg" alt="Logo Diccionario">
+                    <img class="responsive" src="/images/logo/logo-responsive.svg" alt="Logo Diccionario">
+                </a>
+            </div>
+        </div>
+        <ul class="calcite-nav nav navbar-nav hidden-xs" style="z-index: 100;">
+            <ul class="menu-items">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/acercade.html">Acerca de</a><i class="fas fa-chevron-down"></i></li>
+            </ul>
+            <li class="content-login-iamge">
+                <a id="loginBtn" onclick="gotoLogin();">
+                    <img id="userPhoto1" src="/images/iconos/User.png" onerror="defaultUserPhoto();" alt="Iniciar sesion" />
+                    <span id="userName" style="display: none;">Iniciar sesion</span>
+                </a>
+            </li>
+        </ul>
+        <div class="calcite-nav nav navbar-nav">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only" style="background: red;">Toggle navigation</span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+                <span class="icon-bar" style="background-color: white;"></span>
+            </button>
+
+        </div>
+    </nav>
+    <div id="navbar" class="calcite-bgcolor-igac navbar-collapse collapse hidden-md hidden-lg" aria-expanded="false">
+        <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="/acercade.html">Acerca de</a><i class="fas fa-chevron-down"></i></li>
+        </ul>
+    </div>
+
+    <div class="calcite-map">
+        <div id="homeDiv">
+            <div class="container-main">
+                <div class="row-main">
+                    <div class="side-bar">
+                        <div class="top">
+                            <div class="tittle">
+                                <h1>El nuevo diccionario<br>geogr&aacute;fico<b> / El rol del IGAC</b><br><b>/ Grandes temáticas /</b></h1>
+                            </div>
+                            <div class="ilustracion">
+                                <img src="images/acercade/ilustracionside.png" alt="ilustracion igac">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-content">
+                        <div class="sumary">
+                            <div class="capital-letter">
+                                <img src="images/acercade/letraa.svg" alt="letra a">
+                            </div>
+                            <div class="introduction">
+                                <h2>Ahora, una experiencia digital, viva e interconectada.</h2>
+                                <p>En el IGAC llevamos la b&uacute;squeda de la toponimia del pa&iacute;s hacia una experiencia digital. Cientos de p&aacute;ginas de t&eacute;rminos y nombres geogr&aacute;ficos en vol&uacute;menes impresos, ahora publicadas en-l&iacute;nea para ser consultadas con un s&oacute;lo clic desde la barra de b&uacute;squeda.</p>
+                                <p>M&aacute;s de 200.000 top&oacute;nimos y t&eacute;rminos geogr&aacute;ficos expanden los l&iacute;mites de lo que percibimos de nuestro territorio. Conocer la realidad geogr&aacute;fica del pa&iacute;s permite entenderlo de una manera m&aacute;s cercana y dimensionar sus riquezas. Tambi&eacute;n, nos da una noci&oacute;n de su historia, de las sociedades que viven en sus regiones, y los significados que se construyen entorno a su paisaje geogr&aacute;fico.</p>
+                                <p>A trav&eacute;s de este diccionario, queremos expandir la noci&oacute;n del pa&iacute;s que tenemos. Aunque nuestros l&iacute;mites y fronteras sean unos, con este nuevo cap&iacute;tulo digital del diccionario, queremos que todos perciban las infinitas riquezas geogr&aacute;ficas que conforman el territorio y nos describen el lugar donde habitamos y c&oacute;mo vivimos.</p>
+                            </div>
+                            <div class="objetives">
+                                <div class="title">
+                                    <div class="number">
+                                        <img src="images/acercade/icon-one.svg" alt="numero 1">
+                                    </div>
+                                    <h3>Nuestros 3 objetivos y c&oacute;mo una experiencia digital nos permite cumplirlos.</h3>
+                                </div>
+                                <div class="content">
+                                    <div class="title">
+                                        <div class="icon">
+                                            <img src="images/acercade/icon-key.svg" alt="key icon">
+                                        </div>
+                                        <div class="sumary-content">
+                                            <h3>Disponer</h3>
+                                            <p>Todos los d&iacute;as se identifican nuevas entidades geogr&aacute;ficas que existen en nuestro territorio. Est&aacute; en nuestro ADN darles vida a trav&eacute;s de su estudio, catalogaci&oacute;n, documentaci&oacute;n, y oficializaci&oacute;n de su nombre. A trav&eacute;s de esto, todos pueden conocerlas y usar su informaci&oacute;n como insumo valioso para generar nuevo conocimiento y promover el desarrollo del pa&iacute;s.</p>
+                                            <div class="info">
+                                                <div class="info-description">
+                                                    <div class="icon">
+                                                        <img src="images/acercade/info.svg" alt="key icon">
+                                                    </div>
+                                                    <h3>Tener un diccionario digital nos permite…</h3>
+                                                </div>
+                                                <p>multiplicar el n&uacute;mero de personas que acceden a la informaci&oacute;n disponible y lo transforman en conocimiento.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title">
+                                        <div class="icon">
+                                            <img src="images/acercade/inter.svg" alt="key icon">
+                                        </div>
+                                        <div class="sumary-content">
+                                            <h3>Interconectar</h3>
+                                            <p>Cada uno de los elementos geogr&aacute;ficos (naturales &oacute; artificiales) tienen una ubicaci&oacute;n asociada, un punto en el mapa, informaci&oacute;n cartogr&aacute;fica, un significado cultural &oacute; social; algunos inclusive, dependiendo de la escala, aparecen en im&aacute;genes satelitales. Dada a esta diversidad de atributos, tenemos la tarea de generar un ecosistema de herramientas interconectadas que nos permitan profundizar el entendimiento e ir m&aacute;s all&aacute; de una definici&oacute;n textual, est&aacute;tica y aislada.</p>
+                                            <div class="info">
+                                                <div class="info-description">
+                                                    <div class="icon">
+                                                        <img src="images/acercade/info.svg" alt="key icon">
+                                                    </div>
+                                                    <h3>Tener un diccionario digital nos permite…</h3>
+                                                </div>
+                                                <p>ir al detalle, inter-operar entre cartograf&iacute;a, mapas, datos, im&aacute;genes y relaciones entre los elementos geogr&aacute;ficos.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title">
+                                        <div class="icon">
+                                            <img src="images/acercade/update.svg" alt="key icon">
+                                        </div>
+                                        <div class="sumary-content">
+                                            <h3>Actualizar</h3>
+                                            <p>Nos compete estar en constante revisi&oacute;n y ampliaci&oacute;n de la base de nombres geogr&aacute;ficos. Colombia es un pa&iacute;s de 1.143 km2 de territorio, y nuestra tarea es conocer qu&eacute; compone cada uno de ellos. Creemos que inherente a la noci&oacute;n de conocer la realidad geogr&aacute;fica est&aacute; el compromiso con la evoluci&oacute;n y la actualizaci&oacute;n.</p>
+                                            <div class="info">
+                                                <div class="info-description">
+                                                    <div class="icon">
+                                                        <img src="images/acercade/info.svg" alt="key icon">
+                                                    </div>
+                                                    <h3>Tener un diccionario digital nos permite…</h3>
+                                                </div>
+                                                <p>la agilidad necesaria para garantizar precisi&oacute;n en la relaci&oacute;n entre realidad y lo que podemos consultar desde la comodidad de nuestro hogar.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="footer">
+            <div class="container">
+                <div class="bird-image">
+                    <img src="/images/iconos/bird.svg" alt="">
+                </div>
+                <div class="row-flex">
+                    <div id="footer">
+                        <div class="row division-footer">
+                            <div class="content-footer">
+                                <div class="title">
+                                    INSTITUTO GEOGRÁFICO AGUSTÍN CODAZZI
+                                </div>
+                                <div class="subtitle">
+                                    Oficinas y horarios
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="tel:+6013773214">Conmutador (1) 3773214</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.igac.gov.co/es/contenido/peticiones-quejas-y-reclamos" target="_blank">E-mail: contactenos@igac.gov.co</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.igac.gov.co/es/contenido/notificaciones-judiciales" target="_blank">Notificaciones judiciales</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">Carrera 30 Nº 48-51, Bogotá</a>
+                                    </li>
+                                </ul>
+                                <div class="subtitle">
+                                    Contáctenos
+                                </div>
+                                <ul>
+                                    <li>Abierto de lunes a viernes de 7:30 a.m. a 3:45 p.m. Jornada continua.</li>
+                                    <li>Sede Central y territorial Cundinamarca</li>
+                                    <li>NIT: 8999990049</li>
+                                    <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=mv5J7epu5ke_Uu6ey12oBxIGmwVNvQBMvgfd4pJEsvJUOUVXTzVQOE1ESlZZRVNZQ1RMVjYzWk8yOS4u" target="_blank">Encuesta de satisfacción y percepción portal web</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-second">
+                        <div class="title">
+                            Nuestras plataformas
+                        </div>
+                        <a href="https://www.colombiaenmapas.gov.co/">Colombia en Mapas</a>
+                        <a href="https://www.colombiaot.gov.co/">Colombia OT</a>
+                        <a href="#">Origen Nacional</a>
+                    </div>
+                    <div class="footer-second cla-b">
+                        <div class="title">
+                            Síguenos
+                        </div>
+                        <a href="https://co.linkedin.com/company/igac"><i class="fa fa-linkedin-in"></i>LinkedIn</a>
+                        <a href="https://es-la.facebook.com/IgacColombia/"><i class="fa fa-facebook-f"></i>Facebook</a>
+                        <a href="https://twitter.com/igacColombia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter"></i>Twitter</a>
+                        <a href="https://www.instagram.com/igaccolombia/"><i class="fa fa-instagram"></i>Instagram</a>
+                        <img src="/images/logo/logo-responsive.svg" alt="">
+                    </div>
+                    <div class="igac-logo">
+                        <img src="/images/logo/logo-responsive.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modalLogin" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border: none; padding-bottom: 0px;">
+                    <a href="#" class="close" onclick="closeLogin(); return false;" aria-label="Cerrar"><span aria-hidden="true">&times;</span></a>
+                    <h4 class="modal-title">Iniciar sesi&oacute;n</h4>
+                </div>
+                <div class="modal-body" style="padding-top: 0px;">
+                    <div id="loginContainer">
+                        <div id="authContainer">
+                        </div>
+                    </div>
+                    <div id="logoutContainer" style="text-align: center;padding: 10px;">
+                        <img id="userPhoto2" src="images/icono_ingreso.png" style="width: 64px; height: 64px;border-radius: 50%;" alt="Imagen Usuario" />
+                        <h5><span id="userName2"></span></h5>
+                        <button id="logoutBtn" type="button" onclick="signOut();" class="btn btn-default btn-danger">
+                            Cerrar sesi&oacute;n
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth__es.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/i18n/es.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/i18n/es.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchorme/2.1.2/anchorme.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/terraformer/1.0.9/terraformer.min.js"></script>
+
+    <script type="text/javascript" defer src="https://js.arcgis.com/3.36/"></script>
+    <script type="text/javascript" src="js/lib/terraformer-arcgis-parser.min.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Hide submenus
+            $('#body-row .collapse').collapse('hide');
+
+            // Collapse/Expand icon
+            $('#collapse-icon').addClass('fa-angle-double-right');
+
+            // Collapse click
+            $('[data-toggle=sidebar-colapse]').click(function() {
+                SidebarCollapse();
+            });
+
+            function SidebarCollapse () {
+                $('#containerFiltros').toggleClass('d-none-newest d-none-new');
+                $('.sidebar-colapse-button').toggleClass( "d-none-new-a d-none-newest-b");
+                $('#collapse-icon').toggleClass('fa-chevron-left fa-angle-double-right');
+                $('#collapse-icon').toggleClass('fa-chevron-left fa-angle-double-right');
+                $('#jumbotron1, #listResults, .searchbarinput, #tableSearchLetter_paginate, .list-leters-content, .contain-letters, .container-letters2, .footer, .termino-page, .toponimo-page').toggleClass('d-none-new-2 d-none-newest-2');
+            }
+        });
+    </script>
+
+</body>
+</html>

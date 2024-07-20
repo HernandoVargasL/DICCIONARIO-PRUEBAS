@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCSH64Q3SF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCSH64Q3SF');
+    </script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="description" content="El primer diccionario digital que consolida más de 200,000 topónimos culturales, naturales y políticos.">
+    <meta name="title" property="og:title" content="Diccionario Geográfico de Colombia">
+    <meta property="og:type" content="website">
+    <meta name="image" property="og:image" content="images/logo-igac-diccionario.jpg">
+    <meta name="keywords" content="diccionario geográfico, diccionario, topónimos, términos geográficos, igac" />
+    <meta name="author" content="Instituto Geográfico Agustín Codazzi - IGAC" />
+    <meta http-equiv="content-language" content="es" />
+    <link rel="canonical" href="https://diccionario.igac.gov.co" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <title>Diccionario Geográfico de Colombia</title>
+
+    <link type="text/css" async rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/css/bootstrap-colorpicker.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" />
+    <link rel="stylesheet" href="js/lib/dist/css/calcite-maps-bootstrap.min-v0.10.css">
+    <link rel="stylesheet" href="js/lib/dist/css/calcite-maps-arcgis-3.x.min-v0.10.css">
+
+    <link rel="stylesheet" href="/css/diccionario.css">
+    <link rel="stylesheet" href="/css/navbar-footer.css">
+    <link rel="stylesheet" href="/css/maestra.css">
+</head>
+<body class="calcite calcite-nav-top teminos-page">
+    <!-- header -->
+    <div class="barra_gov">
+        <a class="logo-gov" href="https://www.gov.co/home/" target="_blank">
+            <img alt="Logo Gov.co" src="/images/nav/header_govco.png">
+        </a>
+    </div>
+    <nav>
+        <div class="navbarigac">
+            <div class="logos">
+                <a href="https://www.igac.gov.co" class="navbar-brand-igac" target="_blank">
+                    <img alt="Logo IGAC" src="/images/nav/logo.png">
+                </a>
+                <img src="/images/nav/diccionario.svg" alt="Diccionario Geográfico de Colombia">
+            </div>
+            <ul id="link-list">
+                <li>
+                    <a href="index.html" rel="noopener" href="/index.html">Inicio</a>
+                </li>
+                <li>
+                    <a class="collapse-buton">
+                        Acerca de
+                        <img src="/images/nav/ico-arrow.png" alt="">
+                    </a>
+
+                    <ul id="collapse-menu" class="collapse-menu">
+                        <li>
+                            <a href="/el_nuevo_diccionario_geografico.html">El nuevo diccionario geogr&#225;fico</a>
+                            <img src="/images/nav/ico-arrow.png" alt="">
+                        </li>
+                        <li>
+                            <a href="/el_rol_del_igac.html">El rol del IGAC</a>
+                            <img src="/images/nav/ico-arrow.png" alt="">
+                        </li>
+                        <li>
+                            <a href="/grandes_tematicas.html">Grandes tem&aacute;ticas</a>
+                            <img src="/images/nav/ico-arrow.png" alt="">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <button class='nav-bar-toggle-igac'>
+                <div class='icon-bar'></div>
+                <div class='icon-bar'></div>
+                <div class='icon-bar'></div>
+            </button>
+        </div>
+        <div class='navbarnavigac'>
+        </div>
+    </nav>
+    <div class="calcite-map">
+
+        <div id="mapViewDiv" class="calcite-map-absolute main-small-map" style="background: white;">
+            <div id="homeDiv">
+
+                <section class="container">                    
+                    <div style="text-align: center;">
+                        <br /><br />
+                        <p>Seleccione una letra para buscar los t&eacute;rminos por letra:</p>
+                        <div class="items">
+                            <a href="#" onclick="filtro(null);">Todos los t&eacute;rminos</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('A');">A</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('B');">B</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('C');">C</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('D');">D</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('E');">E</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('F');">F</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('G');">G</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('H');">H</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('I');">I</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('J');">J</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('K');">K</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('L');">L</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('M');">M</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('N');">N</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('Ñ');">Ñ</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('O');">O</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('P');">P</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('Q');">Q</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('R');">R</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('S');">S</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('T');">T</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('U');">U</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('V');">V</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('W');">W</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('X');">X</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('Y');">Y</a>&nbsp;-&nbsp;
+                            <a href="#" onclick="filtro('Z');">Z</a>
+                        </div>
+                    </div>
+                </section>
+                <div class="container">
+                    <br />
+                    <br />
+                    <table id="tableSearchTerminos" class="table table-condensed table-hover cell-border" style="text-align: center;width: 100%;">
+                        <thead id="tableSearchTerminosHeader">
+                            <tr>
+                                <th style="text-align: center;">T&eacute;rmino</th>
+                                <th style="text-align: center;">Campo de aplicaci&oacute;n</th>
+                                <th style="text-align: center;">Definici&oacute;n</th>
+                                <th style="text-align: center;">Fuente</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableSearchTerminosTable">
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="containerf">
+            <div class="footer-container">
+                <div class="rowf">
+                    <div class="col-md-6f">
+                        <h2 class="footer-titulo">Instituto Geográfico Agustín Codazzi - IGAC</h2>
+                    </div>
+                    <div class="logos-footer col-md-6f">&nbsp;</div>
+                </div>
+                <div class="rowf">
+                    <div class="col-md-6f">
+                        <h2 class="sub-titulo-sede-gov-co">Información sede principal</h2>
+
+                        <h3>Dirección:</h3>
+                        <p>Bogotá D.C. - Carrera 30 # 48-51</p>
+
+                        <h3>Horarios de atención al ciudadano:</h3>
+                        <p>Abierto al público de lunes a viernes de 9:00 a.m. a 4:00 p.m. jornada continua Sede Central y territorial Cundinamarca (Horario de atención temporal acatando las medidas y demás regulaciones de bioseguridad)</p>
+                        <h3>Teléfono Conmutador:</h3>
+                        <p>
+                            <a href="tel:6016531888">+57 601 653 18 88</a>
+                        </p>
+                        <h3>Correo de contacto:</h3>
+                        <p>
+                            <a href="mailto:contactenos@igac.gov.co">contactenos@igac.gov.co</a>
+                        </p>
+
+                        <h3>Correo de notificaciones judiciales:</h3>
+                        <p>
+                            <a href="mailto:judiciales@igac.gov.co">judiciales@igac.gov.co</a>
+                        </p>
+                        <p>NIT: 8999990049</p>
+
+                        <p>©Copyright 2021 - Todos los derechos reservados Gobierno de Colombia</p>
+                    </div>
+                    <div class="col-md-6f">
+                        <h3>Contáctenos en nuestras redes sociales</h3>
+
+                        <div class="redes-sociales">
+                            <p>
+                                <a href="https://www.facebook.com/IgacColombia" tabindex="-1" target="_blank">
+                                    <img alt="Visitar Facebook IGAC" class="icono-redes" src="/images/footer/facebook.svg">
+                                    Facebook IGAC
+                                </a>
+                            </p>
+
+                            <p>
+                                <a href="https://twitter.com/igacColombia" tabindex="-1" target="_blank">
+                                    <img alt="Visitar Twitter IGAC" class="icono-redes" src="/images/footer/twitter.svg">
+                                    Twitter IGAC
+                                </a>
+                            </p>
+
+                            <p>
+                                <a href="https://www.instagram.com/accounts/login/?next=/igacColombia/" tabindex="-1" target="_blank">
+                                    <img alt="Visitar Instagram IGAC" class="icono-redes" src="/images/footer/instagram.svg">
+                                    Instagram IGAC
+                                </a>
+                            </p>
+                        </div>
+                        <div class="footer-enlaces">
+                            <a class="btn-low">Políticas</a>
+                            <a class="btn-low">Mapa del sitio</a>
+                            <a class="btn-low">Términos y condiciones</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gov-co-footer-pie">
+            <div class="gov-co-footer-auto containerf">
+                <img alt="Logo marca de Colombia" class="gov-co-logo-pie-blanco" src="/images/footer/marca_colombia.png">
+
+                <img alt="Logo de Gov Co" class="gov-co-logo-pie-mesa" src="/images/footer/header_govco.png">
+
+                <a class="text-white text-align-right" href="https://www.gov.co" target="_blank">
+                    Conoce GOV.CO aquí
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modalLogin" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border: none; padding-bottom: 0px;">
+                    <a href="#" class="close" onclick="closeLogin(); return false;" aria-label="Cerrar"><span aria-hidden="true">&times;</span></a>
+                    <h4 class="modal-title">Iniciar sesi&oacute;n</h4>
+                </div>
+                <div class="modal-body" style="padding-top: 0px;">
+                    <div id="loginContainer">
+                        <div id="authContainer">
+                        </div>
+                    </div>
+                    <div id="logoutContainer" style="text-align: center;padding: 10px;">
+                        <img id="userPhoto2" src="images/icono_ingreso.png" style="width: 64px; height: 64px;border-radius: 50%;" alt="Imagen Usuario" />
+                        <h5><span id="userName2"></span></h5>
+                        <button id="logoutBtn" type="button" onclick="signOut();" class="btn btn-default btn-danger">
+                            Cerrar sesi&oacute;n
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth__es.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/i18n/es.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/i18n/es.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchorme/2.1.2/anchorme.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/dataTables.bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="/navbar.js"></script>
+    <script type="text/javascript" src="/js/index_terminos.js"></script>
+
+</body>
+</html>

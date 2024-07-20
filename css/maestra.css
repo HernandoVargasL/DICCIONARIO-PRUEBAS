@@ -1,0 +1,763 @@
+/*global*/
+:root {
+    --azul-igac: #33669e;
+    --azul-igac-dark: #234570;
+    --bg-igac-gris: #eff0f1;    
+}
+
+button:focus {
+    outline:0;
+}
+.divider {
+    height: 1px;
+    background: #000;
+    width: 100%;
+    opacity: 0.2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+img {
+    width: 100%;
+    display: block;
+}
+a:hover {
+    text-decoration: none;
+}
+body {
+    line-height: 1.5;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-bottom {
+    align-items: baseline;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+/*bloque igac*/
+.block-igac { 
+    max-width: 1170px;
+    height: 100%;
+    padding: 0;
+}
+
+/*portada*/
+.portada::before {
+    content: inherit;
+}
+.portada::after {
+    content: inherit;
+}
+.container-portada {
+    width: 100%;
+    height: 344px;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+}
+#jumbotronHome .container-portada {
+    background: #fff8f3;
+}
+#jumbotronTermino .container-portada {
+    height: auto !important;
+    background: #fff8f3;
+    padding-top: 10px;
+}
+#jumbotronTermino .container-portada .container .row {
+    align-items: center;
+}
+#jumbotronET .container-portada,
+#jumbotronUnidad .container-portada {    
+    background: #7ba982 !important;
+}
+#jumbotronET .container-portada .text-content div {
+    color: #fff;
+}
+#jumbotronNG .container-portada {    
+    background: #6a5b77 !important;
+}
+#jumbotronNG .container-portada .text-content div {
+    color: #fff;
+}
+#jumbotronTG .container-portada {    
+    background: #5b759d !important;
+}
+#jumbotronTG .container-portada .text-content div {
+    color: #fff;
+}
+#jumbotronNGAdd .container-portada {    
+    background: #d77271 !important;
+}
+#jumbotronNGAdd .container-portada .text-content div {
+    color: #fff;
+}
+#jumbotronQP .container-portada {    
+    background: #e2af90 !important;
+}
+#jumbotronQP .container-portada .text-content div {
+    color: #fff;
+}
+.origen .container-portada {
+    background-image: url('/../images-home/bg/bg-portada.svg');
+}
+.colombiaMapas .container-portada {
+    background-image: url('/../images/home/bg-portada.svg');
+}
+.container-portada .text-content {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    color: #333333;
+}
+.container-portada .text-content #listResultsUnidadContenido2 {
+    color: #fff;
+}
+.container-portada .title{
+    font-family: 'Gill Sans Std semi Bold';
+    font-size: 36px;
+    text-transform: lowercase;
+    color: var(--azul-igac);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.container-portada .text-content #listResultsUnidadContenido2 .title {
+    color: #fff;
+}
+.container-portada .text-content #listResultsUnidadContenido2 a {
+    color: #fff;
+    text-decoration: underline;
+}
+.container-portada .text-content .title h1{
+    text-transform: none;
+}
+.container-portada .text-content .title::first-letter {
+    text-transform: uppercase;
+}
+.container-portada .text-content .title p {
+    font-family: 'Gill Sans Std bold';
+    font-size: 40%;
+    margin-bottom: 10px;
+    color: #333;
+}
+.container-portada .text-content .title h1 {
+    line-height: 2.4rem;
+    margin-top: 0;
+    color: var(--azul-igac);
+}
+.container-portada .text-content .summary {
+    font-family: 'Gill Sans Std Light';
+    line-height: normal;
+    font-size: 18px;
+}
+.container-portada .text-content .link {
+    color: #337ab7;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+.container-portada .summary ol {
+    padding-left: 15px;
+}
+.container-portada .summary ol li {
+    margin-bottom: 10px;
+}
+.colombiaMapas .container-portada .text-content .summary {
+    line-height: 1.5rem;
+}
+#terminoDefinicionDiv ol {
+    padding-left: 10px;
+}
+.container-portada .container {
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.container-portada .container .row {
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+.container-portada .container .col-md-6:first-child {
+    height: 100%;
+    align-items: center;
+}
+.container-portada .container .linkBtn {
+    position: absolute;
+    top: 20px;
+    border: 1px solid var(--azul-igac);
+    padding: 2px 15px;
+    background: #ffffff9e;
+}
+
+
+/*páginas portada inicio y sub sección*/
+.portada-igac.portadaSub {    
+    height: 400px;
+    display: flex;
+}
+.portada-igac .contenido-portada {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.portada-igac.portadaSub.origen.herramientas {
+    background: url('../ilustraciones/ilustracion_origen_herramientas.svg'), #e8f2ec;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 45%;
+}
+.portada-igac.portadaSub.origen.documentos {
+    background: url('../ilustraciones/ilustracion_origen_documentos.svg'), #fef8e2;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 45%;
+}
+.portada-igac.portadaSub.origen.hojas-cartograficas {
+    background: url('../ilustraciones/ilustracion_origen_hojas_cartograficas.svg'), #d9f2ec;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 40%;
+}
+.portada-igac.portadaSub h1 {
+    margin-top: 0;
+    color: #0052ae;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 0;
+}
+.portada-igac.portadaSub p {
+    color: #3a80c2;
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 22px;
+}
+.portada-igac .texto-portada {
+    width: 485px;
+}
+.portada-igac .ilustracion {
+    position: absolute;
+    width: 533px;
+    right: 0;
+    bottom: 0;
+}
+
+/*tabs*/
+.tabs-hojas {
+    background: #f0f0f0;
+    padding-top: 110px;
+    padding-bottom: 200px;
+}
+.container-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 40px;
+    position: relative;
+}
+.colombiaMapas .container-tabs {
+    align-items: center;
+}
+.tab-cont {
+    width: 20%;
+    background: #fff;
+    box-shadow: 4px 0px 5px #d6d6d647;
+    border-radius: 5px;
+    position: sticky;
+    border-left: 5px solid #f1685a;
+    padding: 40px 30px;
+}
+.colombiaMapas .tab-cont {
+    width: 28%;
+    height: -webkit-fill-available;
+}
+.tab-cont label {
+    font-size: 15px;
+    height: 15px;
+    color: #000;
+    margin-bottom: 40px;
+    font-family: 'Gill Sans Std semi Bold';
+}
+.tab-cont button {
+    width: 100%;
+    border: inherit;
+    background: #fff;
+    text-align: inherit;
+    padding: 20px 4px;
+    border-top: 1px solid #00000038;
+}
+.tab-cont button:last-child {
+    padding-bottom: 0;
+}
+.tab-cont button p {
+    font-size: 23px;    
+    height: 23px;
+    margin-bottom: 0;
+    color: #58595b;
+}
+.colombiaMapas .tab-cont button p {
+    line-height: 23px;
+    height: auto;
+}
+.tab-cont button:hover {
+    color: #3595e0;
+}
+.tab-content {
+    padding: 0 20px;
+    width: 80%;
+    animation: anime 1s;
+    padding: 0 0 0 40px;
+}
+.colombiaMapas .tab-content {
+    width: 72%;
+}
+.tab-content h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 20px 0 10px 0;    
+}
+.tab-content p {
+    font-weight: 100;
+    margin-top: 20px
+}
+.tab-cont .but {
+    border-left: 0;
+}
+.colombiaMapas .tab-cont .but {
+    display: flex;
+    align-items: center;
+}
+.colombiaMapas .tab-cont .but .icono {
+    width: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    margin-right: 15px;
+}
+.tab-cont .but.active p {
+    color: #3595e0;
+}
+.colombiaMapas .tab-cont .but.active .icono {
+    filter: saturate(100%);
+}
+.colombiaMapas .tab-cont .but .icono {
+    filter: saturate(0%);
+}
+@keyframes anime {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+/*Escalas*/
+.escala {
+    width: 100%;
+    background: transparent;
+}
+.escala.tipo-b {
+    margin-top: 90px;
+}
+.escala .escala-content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.colombiaMapas .escala .escala-content {
+    justify-content: center;
+}
+.escala .escala-content .title {
+    font-size: 19px;
+    color: #414042;
+    margin-bottom: 40px;
+}
+.escala .escala-content .text {
+    width: 30%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.escala.tipo-b .escala-content .text {
+    width: 70%;
+}
+.escala .escala-content .text .img {
+    width: 130px;
+    order: 1;
+    padding: 0;
+}
+.escala .escala-content .text h2 {
+    color: #414042;
+    font-size: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-family: 'Gill Sans Std semi Bold';
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.escala .escala-content .text .divider {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.escala .escala-content .text .divider.no2 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.escala .escala-content .text .divider.no3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.escala .escala-content .text p {
+   color: #58595b;
+   font-size: 19px;
+   line-height: 22px;
+}
+.escala .escala-content .text .check {
+    display: flex;
+}
+.escala .escala-content .text .check .icon {
+    width: 20px;    
+    margin-right: 10px;
+}
+.escala .escala-content .text .check .icon img {
+    box-shadow: 0px 0px 10px #00000057;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-top: -5px;
+}
+.escala .escala-content .text .check h3 {
+    color: #1a2e35;
+    opacity: 1;
+    font-size: 16px;
+    height: 16px;
+    margin-bottom: 15px;
+    font-family: 'Gill Sans Std semi Bold';
+}
+.escala .escala-content .text .check p {
+    color: #000;
+    opacity: 0.6;
+    margin: 0;
+}
+.escala .escala-content .img {
+    width: 70%;
+    order: 1;
+    padding: 0 0 0 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.colombiaMapas .escala .escala-content .img {
+    width: 75%;
+}
+.escala .escala-content .img img {
+    width: 100%;
+}
+.escala .escala-content .check-row {
+    display: flex;
+}
+.escala .escala-content .check-row .check-column {
+    width: 50%;
+}
+/*side bar preguntas frecuentes acerca-de*/
+.acerca-de-body .container-main .row-main .side-bar {
+    width: 35%;
+}
+.acerca-de-body .container-main .row-main .side-bar .top {
+    background: #fff;
+    padding: 50px 50px 0 50px;
+    height: calc(100vh - 60px);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 60px;
+}
+.acerca-de-body .container-main .row-main .side-bar .tittle h1 {
+    line-height: 1.1;    
+    font-size: 35px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.acerca-de-body .container-main .row-main .side-bar .tittle h1 .active.active1 {
+    color: #0069b3;
+}
+.acerca-de-body .container-main .row-main .side-bar .tittle h1 .active.active2 {
+    color: #f4a833;
+}
+.acerca-de-body .container-main .row-main .side-bar .tittle h1 .active.active3 {
+    color: #f14a36;
+}
+.acerca-de-body .container-main .row-main .side-bar .tittle h1 .active.active4 {
+    color: #5045b3;
+}
+.acerca-de-body .container-main .row-main .side-bar .tittle h1 .active.active5 {
+    color: #5045b3;
+}
+.acerca-de-body .container-main .row-main .side-bar .tittle b, a {
+    color: #a5a5a4;
+}
+.acerca-de-body .container-main .row-main .side-bar .tittle a:hover {
+    color: #636363;
+    text-decoration: none;
+}
+.acerca-de-body .container-main .row-main .side-bar .tittle a:hover {
+    transition: color 0.3s ease;
+}
+.acerca-de-body .container-main .row-main .side-bar .ilustracion {
+    margin-left: -50px;
+    margin-right: -50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: -6px;
+}
+
+/*media querys portadas*/
+@media (max-width: 992px) {
+    /*media querys portada principal*/
+    .container-portada .text-content .title {
+        font-size: 32px;
+    }
+    .container-portada .text-content .summary {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    /*media querys portada secundaria*/
+    .portada-igac .texto-portada {
+        width: 50%;
+    }
+    .portada-igac.portadaSub h1 {
+        font-size: 32px;
+        line-height: 1;
+    }
+    .portada-igac.portadaSub.origen.herramientas {
+        background-size: 50%;
+    }
+    .portada-igac.portadaSub.origen.documentos {
+        background-size: 50%;
+    }
+    .portada-igac.portadaSub.origen.hojas-cartograficas {
+        background-size: 50%;
+    }
+    .portada-igac .contenido-portada p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
+/*páginas portada inicio y sub sección media querys*/
+@media (max-width: 1192px) {
+    .portada {
+        padding: 0 30px;
+        margin-top: 0 !important;
+    }
+    .portada-igac .contenido-portada {
+        padding: 0 30px;
+    }
+}
+@media (max-width: 1024px) {
+    .container-portada {
+        height: inherit;
+        padding-top: 30px;
+        background-size: 48%;        
+    }
+    .origen .container-portada {
+        background-size: 45%;
+    }
+    .colombiaMapas .container-portada {
+        background-size: 50%;
+    }
+    .portada {
+        padding: 0 30px;
+    }
+    .container-portada .text-content {
+        width: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .container-portada {
+        background-size: 70%;
+    }
+    .origen .container-portada {
+        background-size: 80%;
+    }
+    .colombiaMapas .container-portada {
+        height: 500px;
+        background-size: 90%;
+    }
+    .portada {
+        margin-top: 50px;
+        padding: 0 15px;
+        margin-bottom: 30px !important;
+    }
+    .container-portada .text-content {
+        width: 100%;
+    }
+    .container-portada .text-content .title br {
+        display: none;
+    }
+    /*sub sección media querys*/
+    .portada-igac.portadaSub {
+        height: 420px;
+    }
+    .portada-igac .contenido-portada {
+        padding: 0 15px;
+    }
+    .portada-igac .contenido-portada {
+        align-items: inherit;
+    }
+    .portada-igac .texto-portada {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .portada-igac.portadaSub.origen.herramientas {
+        background-size: 70%;
+    }
+    .portada-igac.portadaSub.origen.documentos {
+        background-size: 70%;
+    }
+    .portada-igac.portadaSub.origen.hojas-cartograficas {
+        background-size: 70%;
+    }
+}
+
+/*media querys tabs*/
+@media (max-width: 1192px) {
+    /*media querys tabs hojas*/
+    .tabs-hojas {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .tab-cont {
+        width: 15%;
+        padding: 40px 15px;
+    }
+    .tab-cont button {
+        padding: 10px 4px;
+    }
+    .tab-cont button p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 992px) {
+    /*media querys tabs hojas*/
+    .tab-cont {
+        width: 100%;
+        overflow: auto;
+        position: relative;
+        padding: 20px 15px;
+        margin-bottom: 40px;
+    }
+    .container-tabs {
+        width: 100%;
+    }
+    .colombiaMapas .tab-cont {
+        width: 100%;
+    }
+    .colombiaMapas .tab-content {
+        width: 100%;
+    }
+    .escala.tipo-b {
+        margin-top: 0;
+    }
+    .escala.tipo-b .escala-content .text {
+        width: 100%;
+    }
+    .tab-cont label {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+    }
+    .tab-cont .but {
+        width: auto;
+        border-top: 0;
+        padding-right: 20px;
+        margin-right: 20px;
+        border-right: 1px solid #00000038;
+    }
+    .tab-cont button:last-child {
+        padding-bottom: 10px;
+    }
+    .tab-cont .but:last-child {
+        border-right: 0;
+    }
+    .tab-cont .content-but {
+        display: flex;
+        
+    }
+    .tab-content {
+        width: 100%;
+        padding-left: 0;
+    }
+    .escala .escala-content .text {
+        margin-bottom: 0;
+        width: 40%;
+    }
+}
+@media (max-width: 576px) {
+    .col-12 {
+        max-width: 100%;
+    }
+    /*media querys tabs hojas*/
+    .tabs-hojas {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .escala .escala-content {
+        flex-wrap: wrap;
+    }
+    .escala .escala-content .text {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .escala .escala-content .img {
+        width: 100%;
+        padding-left: 0;
+    }
+    .colombiaMapas .escala .escala-content .img {
+        width: 100%;
+    }
+    .escala .escala-content .check-row {
+        flex-wrap: wrap;
+    }
+    .escala .escala-content .check-row .check-column {
+        width: 100%;
+    }
+    .block-page-form {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .content-pagina-hojas .form-hojas .container-form {
+        flex-wrap: wrap;
+    }
+    .content-pagina-hojas .form-hojas .container-form .sumary {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .content-pagina-hojas .form-hojas .container-form .form-content {
+        padding-left: 0;
+    }
+}
+
+/*side bar preguntas frecuentes acerca-de*/
+@media (max-width: 768px) {
+    /*global*/
+    .acerca-de-body .container-main .row-main .side-bar {
+        display: none;
+    }
+    .acerca-de-body .main-content {
+        width: 100%;
+    }
+    .acerca-de-body .main-content .sumary .text-content {
+        padding-right: 0;
+    }
+}
