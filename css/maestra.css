@@ -108,10 +108,10 @@ body {
     color: #fff;
 }
 .origen .container-portada {
-    background-image: url('./../images-home/bg/bg-portada.svg');
+    background-image: url('../images-home/bg/bg-portada.svg');
 }
 .colombiaMapas .container-portada {
-    background-image: url('./../images/home/bg-portada.svg');
+    background-image: url('../images/home/bg-portada.svg');
 }
 .container-portada .text-content {
     display: flex;
