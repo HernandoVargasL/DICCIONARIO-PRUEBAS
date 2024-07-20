@@ -26,17 +26,17 @@ $(document).ready(function () {
                 if (user.photoURL != "") {
                     $("#userPhoto,#userPhoto2").attr("src", user.photoURL);
                 } else {
-                    $("#userPhoto,#userPhoto2").attr("src", "/images/iconos/User.png");
+                    $("#userPhoto,#userPhoto2").attr("src", "./images/iconos/User.png");
                 }
             } else {
-                $("#userPhoto,#userPhoto2").attr("src", "/images/iconos/User.png");
+                $("#userPhoto,#userPhoto2").attr("src", "./images/iconos/User.png");
             }
         } else {
             currentUser = null;
             $("#logoutContainer").hide();
             $("#loginContainer").show();
             $("#userName,#userName2").html("Iniciar sesion");
-            $("#userPhoto,#userPhoto2").attr("src", "/images/iconos/User.png");
+            $("#userPhoto,#userPhoto2").attr("src", "./images/iconos/User.png");
         }
     }, function (error) {
         console.log(error);
@@ -124,7 +124,7 @@ function filtro(letter) {
 }
 
 function defaultUserPhoto() {
-    $("#userPhoto,#userPhoto2").attr("src", "/images/iconos/User.png");
+    $("#userPhoto,#userPhoto2").attr("src", "./images/iconos/User.png");
 }
 
 function signIn() {
