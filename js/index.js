@@ -1469,7 +1469,7 @@ function loadTerminoUnidad(codigo) {
                 }
 
                 if (currentCaracterizacion.CODIGO != null) {
-                    $("#terminoResultsUnidadHeaderImg").attr("src", "../images/DEPTOS/" + currentCaracterizacion.CODIGO.substring(0, 2) + ".png");
+                    $("#terminoResultsUnidadHeaderImg").attr("src", "./images/DEPTOS/" + currentCaracterizacion.CODIGO.substring(0, 2) + ".png");
                     $("#terminoResultsUnidadHeaderImg").show();
                 }
 
@@ -2071,7 +2071,7 @@ function updateTarjetaUnidad(data) {
 
 
     if (currentCaracterizacion.CODIGO != null) {
-        $("#listResultsUnidadHeaderImg").attr("src", "../images/DEPTOS/" + currentCaracterizacion.CODIGO.substring(0, 2) + ".png");
+        $("#listResultsUnidadHeaderImg").attr("src", "./images/DEPTOS/" + currentCaracterizacion.CODIGO.substring(0, 2) + ".png");
         $("#listResultsUnidadHeaderImg").show();
     }
 
