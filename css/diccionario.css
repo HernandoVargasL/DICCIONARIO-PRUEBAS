@@ -1355,7 +1355,7 @@ select {
 
 
 .herramientas-div {
-    background-image: url('/images/HOME/HERRAMIENTAS/MAPA-FONDO.png');
+    background-image: url('./images/HOME/HERRAMIENTAS/MAPA-FONDO.png');
     height: 100%;
     background-size: cover;
 }
@@ -2083,220 +2083,220 @@ select {
 }
 
 .letterLgNTILDE {
-    background: url('/images/DICCIONARIO/ntilde.png');
+    background: url('./images/DICCIONARIO/ntilde.png');
 }
 
     .letterLgNTILDE:hover {
-        background: url('/images/DICCIONARIO/hover/ntilde.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/ntilde.png'), #f2efea;
     }
 
 .letterLgA {
-    background: url('/images/DICCIONARIO/a.png');
+    background: url('./images/DICCIONARIO/a.png');
 }
 
 
     .letterLgA:hover {
-        background: url('/images/DICCIONARIO/hover/a.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/a.png'), #f2efea;
     }
 
 .letterLgB {
-    background: url('/images/DICCIONARIO/b.png');
+    background: url('./images/DICCIONARIO/b.png');
 }
 
     .letterLgB:hover {
-        background: url('/images/DICCIONARIO/hover/b.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/b.png'), #f2efea;
     }
 
 .letterLgC {
-    background: url('/images/DICCIONARIO/c.png');
+    background: url('./images/DICCIONARIO/c.png');
 }
 
     .letterLgC:hover {
-        background: url('/images/DICCIONARIO/hover/c.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/c.png'), #f2efea;
     }
 
 .letterLgD {
-    background: url('/images/DICCIONARIO/d.png');
+    background: url('./images/DICCIONARIO/d.png');
 }
 
     .letterLgD:hover {
-        background: url('/images/DICCIONARIO/hover/d.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/d.png'), #f2efea;
     }
 
 .letterLgE {
-    background: url('/images/DICCIONARIO/e.png');
+    background: url('./images/DICCIONARIO/e.png');
 }
 
     .letterLgE:hover {
-        background: url('/images/DICCIONARIO/hover/e.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/e.png'), #f2efea;
     }
 
 .letterLgF {
-    background: url('/images/DICCIONARIO/f.png');
+    background: url('./images/DICCIONARIO/f.png');
 }
 
     .letterLgF:hover {
-        background: url('/images/DICCIONARIO/hover/f.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/f.png'), #f2efea;
     }
 
 .letterLgG {
-    background: url('/images/DICCIONARIO/g.png');
+    background: url('./images/DICCIONARIO/g.png');
 }
 
     .letterLgG:hover {
-        background: url('/images/DICCIONARIO/hover/g.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/g.png'), #f2efea;
     }
 
 .letterLgH {
-    background: url('/images/DICCIONARIO/h.png');
+    background: url('./images/DICCIONARIO/h.png');
 }
 
     .letterLgH:hover {
-        background: url('/images/DICCIONARIO/hover/h.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/h.png'), #f2efea;
     }
 
 .letterLgI {
-    background: url('/images/DICCIONARIO/i.png');
+    background: url('./images/DICCIONARIO/i.png');
 }
 
     .letterLgI:hover {
-        background: url('/images/DICCIONARIO/hover/i.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/i.png'), #f2efea;
     }
 
 .letterLgJ {
-    background: url('/images/DICCIONARIO/j.png');
+    background: url('./images/DICCIONARIO/j.png');
 }
 
     .letterLgJ:hover {
-        background: url('/images/DICCIONARIO/hover/j.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/j.png'), #f2efea;
     }
 
 .letterLgK {
-    background: url('/images/DICCIONARIO/k.png');
+    background: url('./images/DICCIONARIO/k.png');
 }
 
     .letterLgK:hover {
-        background: url('/images/DICCIONARIO/hover/k.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/k.png'), #f2efea;
     }
 
 .letterLgL {
-    background: url('/images/DICCIONARIO/l.png');
+    background: url('./images/DICCIONARIO/l.png');
 }
 
     .letterLgL:hover {
-        background: url('/images/DICCIONARIO/hover/l.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/l.png'), #f2efea;
     }
 
 .letterLgM {
-    background: url('/images/DICCIONARIO/m.png');
+    background: url('./images/DICCIONARIO/m.png');
 }
 
     .letterLgM:hover {
-        background: url('/images/DICCIONARIO/hover/m.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/m.png'), #f2efea;
     }
 
 .letterLgN {
-    background: url('/images/DICCIONARIO/n.png');
+    background: url('./images/DICCIONARIO/n.png');
 }
 
     .letterLgN:hover {
-        background: url('/images/DICCIONARIO/hover/n.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/n.png'), #f2efea;
     }
 
 .letterLgO {
-    background: url('/images/DICCIONARIO/o.png');
+    background: url('./images/DICCIONARIO/o.png');
 }
 
     .letterLgO:hover {
-        background: url('/images/DICCIONARIO/hover/o.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/o.png'), #f2efea;
     }
 
 .letterLgP {
-    background: url('/images/DICCIONARIO/p.png');
+    background: url('./images/DICCIONARIO/p.png');
 }
 
     .letterLgP:hover {
-        background: url('/images/DICCIONARIO/hover/p.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/p.png'), #f2efea;
     }
 
 .letterLgQ {
-    background: url('/images/DICCIONARIO/q.png');
+    background: url('./images/DICCIONARIO/q.png');
 }
 
     .letterLgQ:hover {
-        background: url('/images/DICCIONARIO/hover/q.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/q.png'), #f2efea;
     }
 
 .letterLgR {
-    background: url('/images/DICCIONARIO/r.png');
+    background: url('./images/DICCIONARIO/r.png');
 }
 
     .letterLgR:hover {
-        background: url('/images/DICCIONARIO/hover/r.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/r.png'), #f2efea;
     }
 
 .letterLgS {
-    background: url('/images/DICCIONARIO/s.png');
+    background: url('./images/DICCIONARIO/s.png');
 }
 
     .letterLgS:hover {
-        background: url('/images/DICCIONARIO/hover/s.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/s.png'), #f2efea;
     }
 
 .letterLgT {
-    background: url('/images/DICCIONARIO/t.png');
+    background: url('./images/DICCIONARIO/t.png');
 }
 
     .letterLgT:hover {
-        background: url('/images/DICCIONARIO/hover/t.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/t.png'), #f2efea;
     }
 
 .letterLgU {
-    background: url('/images/DICCIONARIO/u.png');
+    background: url('./images/DICCIONARIO/u.png');
 }
 
     .letterLgU:hover {
-        background: url('/images/DICCIONARIO/hover/u.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/u.png'), #f2efea;
     }
 
 .letterLgV {
-    background: url('/images/DICCIONARIO/v.png');
+    background: url('./images/DICCIONARIO/v.png');
 }
 
     .letterLgV:hover {
-        background: url('/images/DICCIONARIO/hover/v.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/v.png'), #f2efea;
     }
 
 .letterLgW {
-    background: url('/images/DICCIONARIO/w.png');
+    background: url('./images/DICCIONARIO/w.png');
 }
 
     .letterLgW:hover {
-        background: url('/images/DICCIONARIO/hover/w.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/w.png'), #f2efea;
     }
 
 .letterLgX {
-    background: url('/images/DICCIONARIO/x.png');
+    background: url('./images/DICCIONARIO/x.png');
 }
 
     .letterLgX:hover {
-        background: url('/images/DICCIONARIO/hover/x.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/x.png'), #f2efea;
     }
 
 .letterLgY {
-    background: url('/images/DICCIONARIO/y.png');
+    background: url('./images/DICCIONARIO/y.png');
 }
 
     .letterLgY:hover {
-        background: url('/images/DICCIONARIO/hover/y.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/y.png'), #f2efea;
     }
 
 .letterLgZ {
-    background: url('/images/DICCIONARIO/z.png');
+    background: url('./images/DICCIONARIO/z.png');
 }
 
     .letterLgZ:hover {
-        background: url('/images/DICCIONARIO/hover/z.png'), #f2efea;
+        background: url('./images/DICCIONARIO/hover/z.png'), #f2efea;
     }
 
 
@@ -2631,224 +2631,224 @@ select {
 
 
 .letterSmNTILDE {
-    background: url('/images/DICCIONARIOPAG/ntilde.png');
+    background: url('./images/DICCIONARIOPAG/ntilde.png');
 }
 
 .letterSmA {
-    background: url('/images/DICCIONARIOPAG/a.png');
+    background: url('./images/DICCIONARIOPAG/a.png');
 }
 
 .letterSmB {
-    background: url('/images/DICCIONARIOPAG/b.png');
+    background: url('./images/DICCIONARIOPAG/b.png');
 }
 
 .letterSmC {
-    background: url('/images/DICCIONARIOPAG/c.png');
+    background: url('./images/DICCIONARIOPAG/c.png');
 }
 
 .letterSmD {
-    background: url('/images/DICCIONARIOPAG/d.png');
+    background: url('./images/DICCIONARIOPAG/d.png');
 }
 
 .letterSmE {
-    background: url('/images/DICCIONARIOPAG/e.png');
+    background: url('./images/DICCIONARIOPAG/e.png');
 }
 
 .letterSmF {
-    background: url('/images/DICCIONARIOPAG/f.png');
+    background: url('./images/DICCIONARIOPAG/f.png');
 }
 
 .letterSmG {
-    background: url('/images/DICCIONARIOPAG/g.png');
+    background: url('./images/DICCIONARIOPAG/g.png');
 }
 
 .letterSmH {
-    background: url('/images/DICCIONARIOPAG/h.png');
+    background: url('./images/DICCIONARIOPAG/h.png');
 }
 
 .letterSmI {
-    background: url('/images/DICCIONARIOPAG/i.png');
+    background: url('./images/DICCIONARIOPAG/i.png');
 }
 
 .letterSmJ {
-    background: url('/images/DICCIONARIOPAG/j.png');
+    background: url('./images/DICCIONARIOPAG/j.png');
 }
 
 .letterSmK {
-    background: url('/images/DICCIONARIOPAG/k.png');
+    background: url('./images/DICCIONARIOPAG/k.png');
 }
 
 .letterSmL {
-    background: url('/images/DICCIONARIOPAG/l.png');
+    background: url('./images/DICCIONARIOPAG/l.png');
 }
 
 .letterSmM {
-    background: url('/images/DICCIONARIOPAG/m.png');
+    background: url('./images/DICCIONARIOPAG/m.png');
 }
 
 .letterSmN {
-    background: url('/images/DICCIONARIOPAG/n.png');
+    background: url('./images/DICCIONARIOPAG/n.png');
 }
 
 .letterSmNTILDE {
-    background: url('/images/DICCIONARIOPAG/ntilde.png');
+    background: url('./images/DICCIONARIOPAG/ntilde.png');
 }
 
 .letterSmO {
-    background: url('/images/DICCIONARIOPAG/o.png');
+    background: url('./images/DICCIONARIOPAG/o.png');
 }
 
 .letterSmP {
-    background: url('/images/DICCIONARIOPAG/p.png');
+    background: url('./images/DICCIONARIOPAG/p.png');
 }
 
 .letterSmQ {
-    background: url('/images/DICCIONARIOPAG/q.png');
+    background: url('./images/DICCIONARIOPAG/q.png');
 }
 
 .letterSmR {
-    background: url('/images/DICCIONARIOPAG/r.png');
+    background: url('./images/DICCIONARIOPAG/r.png');
 }
 
 .letterSmS {
-    background: url('/images/DICCIONARIOPAG/s.png');
+    background: url('./images/DICCIONARIOPAG/s.png');
 }
 
 .letterSmT {
-    background: url('/images/DICCIONARIOPAG/t.png');
+    background: url('./images/DICCIONARIOPAG/t.png');
 }
 
 .letterSmU {
-    background: url('/images/DICCIONARIOPAG/u.png');
+    background: url('./images/DICCIONARIOPAG/u.png');
 }
 
 .letterSmV {
-    background: url('/images/DICCIONARIOPAG/v.png');
+    background: url('./images/DICCIONARIOPAG/v.png');
 }
 
 .letterSmW {
-    background: url('/images/DICCIONARIOPAG/w.png');
+    background: url('./images/DICCIONARIOPAG/w.png');
 }
 
 .letterSmX {
-    background: url('/images/DICCIONARIOPAG/x.png');
+    background: url('./images/DICCIONARIOPAG/x.png');
 }
 
 .letterSmY {
-    background: url('/images/DICCIONARIOPAG/y.png');
+    background: url('./images/DICCIONARIOPAG/y.png');
 }
 
 .letterSmZ {
-    background: url('/images/DICCIONARIOPAG/z.png');
+    background: url('./images/DICCIONARIOPAG/z.png');
 }
 
 
 .pagination-a #letterActual .letterSmA {
-    background: url('/images/DICCIONARIOACT/a.png');
+    background: url('./images/DICCIONARIOACT/a.png');
 }
 
 .pagination-a #letterActual .letterSmB {
-    background: url('/images/DICCIONARIOACT/b.png');
+    background: url('./images/DICCIONARIOACT/b.png');
 }
 
 .pagination-a #letterActual .letterSmC {
-    background: url('/images/DICCIONARIOACT/c.png');
+    background: url('./images/DICCIONARIOACT/c.png');
 }
 
 .pagination-a #letterActual .letterSmD {
-    background: url('/images/DICCIONARIOACT/d.png');
+    background: url('./images/DICCIONARIOACT/d.png');
 }
 
 .pagination-a #letterActual .letterSmE {
-    background: url('/images/DICCIONARIOACT/e.png');
+    background: url('./images/DICCIONARIOACT/e.png');
 }
 
 .pagination-a #letterActual .letterSmF {
-    background: url('/images/DICCIONARIOACT/f.png');
+    background: url('./images/DICCIONARIOACT/f.png');
 }
 
 .pagination-a #letterActual .letterSmG {
-    background: url('/images/DICCIONARIOACT/g.png');
+    background: url('./images/DICCIONARIOACT/g.png');
 }
 
 .pagination-a #letterActual .letterSmH {
-    background: url('/images/DICCIONARIOACT/h.png');
+    background: url('./images/DICCIONARIOACT/h.png');
 }
 
 .pagination-a #letterActual .letterSmI {
-    background: url('/images/DICCIONARIOACT/i.png');
+    background: url('./images/DICCIONARIOACT/i.png');
 }
 
 .pagination-a #letterActual .letterSmJ {
-    background: url('/images/DICCIONARIOACT/j.png');
+    background: url('./images/DICCIONARIOACT/j.png');
 }
 
 .pagination-a #letterActual .letterSmK {
-    background: url('/images/DICCIONARIOACT/k.png');
+    background: url('./images/DICCIONARIOACT/k.png');
 }
 
 .pagination-a #letterActual .letterSmL {
-    background: url('/images/DICCIONARIOACT/l.png');
+    background: url('./images/DICCIONARIOACT/l.png');
 }
 
 .pagination-a #letterActual .letterSmM {
-    background: url('/images/DICCIONARIOACT/m.png');
+    background: url('./images/DICCIONARIOACT/m.png');
 }
 
 .pagination-a #letterActual .letterSmN {
-    background: url('/images/DICCIONARIOACT/n.png');
+    background: url('./images/DICCIONARIOACT/n.png');
 }
 
 .pagination-a #letterActual .letterSmNTILDE {
-    background: url('/images/DICCIONARIOACT/ntilde.png');
+    background: url('./images/DICCIONARIOACT/ntilde.png');
 }
 
 .pagination-a #letterActual .letterSmO {
-    background: url('/images/DICCIONARIOACT/o.png');
+    background: url('./images/DICCIONARIOACT/o.png');
 }
 
 .pagination-a #letterActual .letterSmP {
-    background: url('/images/DICCIONARIOACT/p.png');
+    background: url('./images/DICCIONARIOACT/p.png');
 }
 
 .pagination-a #letterActual .letterSmQ {
-    background: url('/images/DICCIONARIOACT/q.png');
+    background: url('./images/DICCIONARIOACT/q.png');
 }
 
 .pagination-a #letterActual .letterSmR {
-    background: url('/images/DICCIONARIOACT/r.png');
+    background: url('./images/DICCIONARIOACT/r.png');
 }
 
 .pagination-a #letterActual .letterSmS {
-    background: url('/images/DICCIONARIOACT/s.png');
+    background: url('./images/DICCIONARIOACT/s.png');
 }
 
 .pagination-a #letterActual .letterSmT {
-    background: url('/images/DICCIONARIOACT/t.png');
+    background: url('./images/DICCIONARIOACT/t.png');
 }
 
 .pagination-a #letterActual .letterSmU {
-    background: url('/images/DICCIONARIOACT/u.png');
+    background: url('./images/DICCIONARIOACT/u.png');
 }
 
 .pagination-a #letterActual .letterSmV {
-    background: url('/images/DICCIONARIOACT/v.png');
+    background: url('./images/DICCIONARIOACT/v.png');
 }
 
 .pagination-a #letterActual .letterSmW {
-    background: url('/images/DICCIONARIOACT/w.png');
+    background: url('./images/DICCIONARIOACT/w.png');
 }
 
 .pagination-a #letterActual .letterSmX {
-    background: url('/images/DICCIONARIOACT/x.png');
+    background: url('./images/DICCIONARIOACT/x.png');
 }
 
 .pagination-a #letterActual .letterSmY {
-    background: url('/images/DICCIONARIOACT/y.png');
+    background: url('./images/DICCIONARIOACT/y.png');
 }
 
 .pagination-a #letterActual .letterSmZ {
-    background: url('/images/DICCIONARIOACT/z.png');
+    background: url('./images/DICCIONARIOACT/z.png');
 }
 
 
@@ -5017,7 +5017,7 @@ select {
 
 #modalForm .modal-body {
     position: relative;
-    background: url('/images/img/modal-bg.png');
+    background: url('./images/img/modal-bg.png');
     background-repeat: no-repeat;
     background-position: center;
     height: 200px;
